@@ -1,15 +1,13 @@
 import { StyleSheet } from 'react-native';
-import Constants from 'expo-constants';
-
 
 export default StyleSheet.create({
     cabecalho: {
         marginTop: 20,
-        flexDirection: 'row',
         height: 70,
+        flexDirection: 'row',
         justifyContent: 'center',
-        backgroundColor: '#000000',
         textAlign: 'center',
+        backgroundColor: '#000000',
     },
 
     cabecalhoLogo: {
