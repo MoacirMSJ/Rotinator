@@ -20,8 +20,8 @@ export default StyleSheet.create({
     lixeira: {
         position: 'absolute',
         right: 0,
-        height: 30,
-        width: 25
+        height: 25,
+        width: 20
     },
 
     rotinaBox: {
@@ -32,7 +32,7 @@ export default StyleSheet.create({
         marginBottom: 20,
         borderWidth: 1,
         width: '90%',
-        left: '5%'
+        left: '5%',
     },
 
     rotinaTitulo: {

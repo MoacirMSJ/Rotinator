@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native'
 import { View, Text, Image, TouchableOpacity, FlatList } from 'react-native';
 import Header from '../Header';
 import Sinal from '../../../assets/icone_sinal.png';
@@ -6,6 +7,12 @@ import Lixeira from '../../../assets/icone_lixeira.png';
 import styles from './styles';
 
 export default function Home() {
+
+    const navigation = useNavigation();
+
+    function navigateToAddRotina() {
+        navigation.navigate('AddRotina');
+    }
 
     const DATA = [
         {
@@ -79,7 +86,7 @@ export default function Home() {
             <Header />
             <View style={styles.identificacao}>
                 <Text style={styles.texto}>Minhas Rotinas</Text>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={navigateToAddRotina}>
                     <Image source={Sinal} style={styles.iconeSinal} />
                 </TouchableOpacity>
             </View>
