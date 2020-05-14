@@ -68,8 +68,8 @@ export default StyleSheet.create({
     },
 
     sinal: {
-        position: 'absolute',
-        right: 15,
+        marginRight: 15
+        // right: 15,
         // top: 5,
     },
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native'
 import { View, Image, Text, TextInput, FlatList, TouchableOpacity } from 'react-native';
 import Header from '../Header'
 import Sinal from '../../../assets/icone_sinal.png';
@@ -8,6 +9,11 @@ import EmptyCheck from '../../../assets/empty_check.png';
 import styles from './styles';
 
 export default function AddRotina() {
+
+    const navigation = useNavigation();
+    function navigateToAddEvento() {
+        navigation.navigate('AddEvento');
+    }
 
     const DATA = [
         {
@@ -54,9 +60,10 @@ export default function AddRotina() {
                 <View style={styles.subHeader}>
                     <Text style={styles.tituloDaPagina}>Adicionar Rotina</Text>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity onPress={navigateToAddEvento}>
                         <Image source={Sinal} style={styles.sinal} />
                     </TouchableOpacity>
+                    
                 </View>
 
                 <View style={styles.textBox}>
